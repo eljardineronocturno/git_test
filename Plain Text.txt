@@ -1,0 +1,83 @@
+eljardineronocturno@xubuntu:~/Desktop/repos$ git clone git@github.com:USER-NAME/REPOSITORY-NAME.git
+Cloning into 'REPOSITORY-NAME'...
+The authenticity of host 'github.com (20.201.28.151)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+ERROR: Repository not found.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+eljardineronocturno@xubuntu:~/Desktop/repos$ git clone esteban.gonzalo69@gmail:eljardineronocturno/git_test.git
+Cloning into 'git_test'...
+ssh: Could not resolve hostname gmail: Temporary failure in name resolution
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+eljardineronocturno@xubuntu:~/Desktop/repos$ git clone git@github.com:eljardineronocturno/git_test.git
+Cloning into 'git_test'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+eljardineronocturno@xubuntu:~/Desktop/repos$ cd git_test
+eljardineronocturno@xubuntu:~/Desktop/repos/git_test$ ls
+README.md
+eljardineronocturno@xubuntu:~/Desktop/repos/git_test$ git remote -v
+origin  git@github.com:eljardineronocturno/git_test.git (fetch)
+origin  git@github.com:eljardineronocturno/git_test.git (push)
+eljardineronocturno@xubuntu:~/Desktop/repos/git_test$ ls
+README.md
+eljardineronocturno@xubuntu:~/Desktop/repos/git_test$ nano README.md 
+eljardineronocturno@xubuntu:~/Desktop/repos/git_test$ nano README.md 
+eljardineronocturno@xubuntu:~/Desktop/repos/git_test$ git remote -v
+origin  git@github.com:eljardineronocturno/git_test.git (fetch)
+origin  git@github.com:eljardineronocturno/git_test.git (push)
+eljardineronocturno@xubuntu:~/Desktop/repos/git_test$ pwd
+/home/eljardineronocturno/Desktop/repos/git_test
+eljardineronocturno@xubuntu:~/Desktop/repos/git_test$ nano hello_world.txt
+eljardineronocturno@xubuntu:~/Desktop/repos/git_test$ ls
+README.md
+eljardineronocturno@xubuntu:~/Desktop/repos/git_test$ touch hello_world.txt
+eljardineronocturno@xubuntu:~/Desktop/repos/git_test$ ls
+hello_world.txt  README.md
+eljardineronocturno@xubuntu:~/Desktop/repos/git_test$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        hello_world.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+eljardineronocturno@xubuntu:~/Desktop/repos/git_test$ git add hello_world.txt 
+eljardineronocturno@xubuntu:~/Desktop/repos/git_test$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   hello_world.txt
+
+eljardineronocturno@xubuntu:~/Desktop/repos/git_test$ git commit -m "Add hello_world.txt"
+[main 799edac] Add hello_world.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hello_world.txt
+eljardineronocturno@xubuntu:~/Desktop/repos/git_test$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+eljardineronocturno@xubuntu:~/Desktop/repos/git_test$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 3 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 302 bytes | 302.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To github.com:eljardineronocturno/git_test.git
+   cba9419..799edac  main -> main
