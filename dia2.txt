@@ -1,0 +1,69 @@
+# wdev - github
+
+**Cheatsheet**
+
+Esta es una lista de referencia con los comandos de Git más usados. **(Podrías considerar marcar esta página como favorita).** Tratá de familiarizarte con los comandos para que eventualmente puedas recordarlos todos:
+
+**Comandos relacionados con un repositorio remoto:**
+
+`git clone git@github.com:USER-NAME/REPOSITORY-NAME.git`
+
+`git push` o `git push origin main` (ambos logran el mismo objetivo en este contexto)
+
+**Comandos relacionados con el flujo de trabajo:**
+
+`git add .`
+
+`git commit -m "A message describing what you have done to make this snapshot different"`
+
+**Comandos relacionados con revisar estado o historial de registros:**
+
+`git status`
+
+`git log`
+
+La sintaxis básica de Git es **programa | acción | destino**.
+
+Por ejemplo:
+
+- `git add .` se lee como **git | add | .**, donde el punto representa todo en el directorio actual;
+- `git commit -m "message"` se lee como **git | commit -m | "message"**; y
+- `git status` se lee como **git | status | (sin destino)**.
+
+---
+
+### 📌 Buenas prácticas en Git
+
+Hay mucho que aprender sobre el uso de Git, pero vale la pena destacar algunas buenas prácticas para que seas un mejor colaborador. Git no solo es útil al trabajar con otros, también lo es cuando trabajás de manera independiente. En el futuro dependerás cada vez más de tu propio historial de commits cuando revisites código antiguo.
+
+Dos buenas prácticas útiles a considerar son los **commits atómicos** y aprovechar esos commits atómicos para que tus mensajes de commit sean más útiles para futuros colaboradores.
+
+Un **commit atómico** es un commit que incluye cambios relacionados únicamente con una característica o tarea de tu programa. Hay dos razones principales para hacerlo:
+
+1. Si algo que cambiaste resulta problemático, es fácil revertir ese cambio específico sin perder los demás.
+2. Te permite escribir mejores mensajes de commit.
+
+¡Vas a aprender más sobre cómo debería lucir un buen mensaje de commit en una lección futura!
+
+---
+
+### 📌 Cambiando el editor de mensajes de commit en Git
+
+Si estás usando Visual Studio Code (y deberías hacerlo si seguís este curso), hay una forma de asegurarte de que si usás `git commit` sin el flag del mensaje (`-m`), no quedes atascado escribiendo tu mensaje en **Vim**.
+
+Cambiar el editor de mensajes por defecto es una buena idea en caso de que olvides el flag, a menos que prefieras usar Vim. No tiene ninguna desventaja cambiarlo, porque siempre vas a poder elegir si escribís el mensaje en la terminal o en la comodidad de VS Code.
+
+El siguiente comando configura eso. Escribilo (o copialo y pegalo) en tu terminal y presioná **Enter**:
+
+`git config --global core.editor "code --wait"`
+
+No habrá confirmación ni salida en la terminal después de ingresar este comando.
+
+Con eso hecho, ahora podés elegir usar:
+
+- `git commit -m "your message here"`
+- o simplemente `git commit` para escribir tu mensaje en **Visual Studio Code**.
+
+Para hacer un commit usando **Visual Studio Code** como editor de texto, simplemente tipeá `git commit`. Después de presionar **Enter**, se abrirá una nueva pestaña en VS Code para que escribas tu mensaje. Podés dar más detalles en varias líneas como parte de tu mensaje de commit.
+
+Después de escribirlo, guardá con **Ctrl + S** (Mac: **Cmd + S**) y cerrá la pestaña. Cuando vuelvas a la línea de comandos, vas a ver tu mensaje de commit y un resumen de los cambios.
